@@ -11,7 +11,7 @@ namespace NodeOrders
         private MongoAccess mongo;
         protected void Page_Load(object sender, EventArgs e)
         {
-             mongo = new MongoAccess("mongodb://user2:password@ds054619.mlab.com:54619/isit420");
+             mongo = new MongoAccess("mongodb://user2:password@ds054619.mlab.com:54619/isit420"); 
 
             var CdDataSet = mySqlAccess.GetCustData();
 

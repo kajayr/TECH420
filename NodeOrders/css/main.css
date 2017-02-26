@@ -1,49 +1,41 @@
 body {
-    color: darkgreen;
-    font-family: Helvetica, Arial, sans-serif;
-}
+  font-family: Helvetica, Arial, sans-serif;
+  color: darkgreen; }
 
 h1 {
-    color: darkgreen;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 35px;
-}
+  font-size: 35px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: darkgreen; }
 
 h2 {
-    color: darkgreen;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 25px;
-}
+  font-size: 25px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: darkgreen; }
 
 h3 {
-    color: darkgreen;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 15px;
-}
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: darkgreen; }
 
 .myLinks {
-    color: darkgreen;
-    text-decoration: none;
-}
+  text-decoration: none;
+  color: darkgreen; }
 
 .widelabel {
-    color: darkgreen;
-    display: -moz-inline-block;
-    display: inline-block;
-    width: 120px;
-}
+  display: -moz-inline-block;
+  display: inline-block;
+  width: 120px;
+  color: darkgreen; }
 
 .LinkButton:hover {
-    color: red;
-    font-weight: bold;
-}
+  font-weight: bold;
+  color: red; }
 
 .movieInfo {
-    background-color: white;
-    border-radius: 5px;
-    border-style: outset;
-    color: purple;
-    max-height: 280px;
-    overflow: auto;
-    width: 700px;
-}
+  max-height: 280px;
+  overflow: auto;
+  border-style: outset;
+  background-color: white;
+  border-radius: 5px;
+  color: purple;
+  width: 700px; }

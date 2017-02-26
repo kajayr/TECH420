@@ -9,3 +9,15 @@ C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\bin\De
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\bin\Debug\MongoDB.Driver.Legacy.xml
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\EasyMongo.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\MongoDB.Bson.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\MongoDB.Driver.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\MongoDB.Driver.Legacy.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\MongoDB.Driver.xml
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\bin\Debug\MongoDB.Driver.Legacy.xml
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\DataAccess\obj\Debug\DataAccess.pdb

@@ -72,3 +72,17 @@ C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\Mo
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.xml
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.dll
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.pdb
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\NodeOrders.dll.config
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\NodeOrders.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\NodeOrders.pdb
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\DataAccess.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\MongoDB.Bson.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\MongoDB.Driver.Legacy.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\MongoDB.Driver.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\MongoDB.Driver.Core.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\DataAccess.pdb
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\MongoDB.Driver.Legacy.xml
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\bin\MongoDB.Driver.xml
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\obj\Debug\NodeOrders.csprojResolveAssemblyReference.cache
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\obj\Debug\NodeOrders.dll
+C:\Users\Kajayr\Documents\GitHub\richard\TECH420\NodeOrders\obj\Debug\NodeOrders.pdb
