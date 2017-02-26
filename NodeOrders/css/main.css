@@ -1,0 +1,49 @@
+body {
+    color: darkgreen;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: darkgreen;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 35px;
+}
+
+h2 {
+    color: darkgreen;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 25px;
+}
+
+h3 {
+    color: darkgreen;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.myLinks {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.widelabel {
+    color: darkgreen;
+    display: -moz-inline-block;
+    display: inline-block;
+    width: 120px;
+}
+
+.LinkButton:hover {
+    color: red;
+    font-weight: bold;
+}
+
+.movieInfo {
+    background-color: white;
+    border-radius: 5px;
+    border-style: outset;
+    color: purple;
+    max-height: 280px;
+    overflow: auto;
+    width: 700px;
+}

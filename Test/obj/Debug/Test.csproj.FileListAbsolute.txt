@@ -1,0 +1,11 @@
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\bin\Debug\Test.dll
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\bin\Debug\Test.pdb
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\bin\Debug\nunit.framework.dll
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\bin\Debug\WebDriver.dll
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\bin\Debug\WebDriver.Support.dll
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\bin\Debug\nunit.framework.xml
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\bin\Debug\WebDriver.xml
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\bin\Debug\WebDriver.Support.xml
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\obj\Debug\Test.dll
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\Test\obj\Debug\Test.pdb

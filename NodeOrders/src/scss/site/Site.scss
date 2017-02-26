@@ -1,0 +1,52 @@
+﻿$color: darkgreen;
+$font: Helvetica, Arial, sans-serif;
+
+body {
+    font-family: $font;
+    color: $color;
+}
+
+h1 {
+    font-size: 35px;
+    font-family: $font;
+    color: $color;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: $font;
+    color: $color;
+}
+
+h3 {
+    font-size: 15px;
+    font-family: $font;
+    color: $color;
+}
+
+.myLinks {
+    text-decoration: none;
+    color: $color;
+}
+
+.widelabel {
+    display: -moz-inline-block;
+    display: inline-block;
+    width: 120px;
+    color: $color;
+}
+
+.LinkButton:hover {
+    font-weight: bold;
+    color: red;
+}
+
+.movieInfo {
+    max-height: 280px;
+    overflow: auto;
+    border-style: outset;
+    background-color: white;
+    border-radius: 5px;
+    color: purple;
+    width: 700px;
+}
