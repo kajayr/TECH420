@@ -11,7 +11,6 @@ namespace NodeOrders
         private MongoAccess mongo;
         protected void Page_Load(object sender, EventArgs e)
         {
-             mongo = new MongoAccess("mongodb://user2:password@ds054619.mlab.com:54619/isit420");
 
             var CdDataSet = mySqlAccess.GetCustData();
 
@@ -22,19 +21,32 @@ namespace NodeOrders
 
         protected void CdDataList_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            if (e.CommandName == "Buy")
-            {
-                var tempString = TextBoxCC.Text;
-                var newstring = tempString.Trim(); // get rid of leading and trailing spaces
-                var noSpaceString = newstring.Replace(" ", ""); // get rid of inner spaces
-                var CC = Convert.ToInt64(noSpaceString);
+            var x = 16;
 
-                tempString = TextBoxPhone.Text;
-                newstring = tempString.Trim(); // get rid of leading and trailing spaces
-                noSpaceString = newstring.Replace(" ", ""); // get rid of inner spaces
-                var phonenum = Convert.ToInt64(noSpaceString);
-                LabelResults.Text = mySqlAccess.Buy(e.CommandArgument.ToString(), CC, phonenum);
+
+            if (e.CommandName != "Buy") return;
+
+            //yeah...
+            // lets use the power of an OO and use . 
+            // lets also use a type that isn't proc dependent.... 
+            // and last but not least, catch this horrible block
+            try
+            {
+                var creditCardNumber = long.Parse(TextBoxCC.Text.Trim().Replace(" ", ""));
+                var phonenum = long.Parse(TextBoxPhone.Text.Trim().Replace(" ", ""));
+                var name = TextBoxName.Text;
+                LabelResults.Text = mySqlAccess.Buy(e.CommandArgument.ToString(), creditCardNumber, phonenum, name );
             }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
+        }
+
+        protected void CdDataList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

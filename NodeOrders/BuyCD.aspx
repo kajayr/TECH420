@@ -4,11 +4,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <h2> There are the CDs that we are currently offering.</h2>
+    <h2 style="margin-left: 40px"> There are the CDs that we are currently offering.</h2>
 
     <div class="movieInfo">
 
-        <asp:DataList ID="CdDataList" runat="server" OnItemCommand="CdDataList_ItemCommand">
+        <asp:DataList ID="CdDataList" runat="server" OnItemCommand="CdDataList_ItemCommand" OnSelectedIndexChanged="CdDataList_SelectedIndexChanged">
             <ItemTemplate>
                 Part Number: <strong style="color: black;"><%#Eval("CdID") %></strong> &nbsp;&nbsp; &nbsp;&nbsp; Title: <strong style="color: black;"><%#Eval("CDname") %></strong><br/>
                 Artist: <strong style="color: black;"><%#Eval("artist") %></strong> &nbsp;&nbsp; &nbsp;&nbsp; Price: <strong style="color: black;"><%#Eval("ListPrice", "{0:C}") %></strong>&nbsp;&nbsp;

@@ -9,3 +9,4 @@ C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\bin\De
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\bin\Debug\MongoDB.Driver.Legacy.xml
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

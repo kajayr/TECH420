@@ -9,6 +9,6 @@
     <Import_RootNamespace>Models</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OrderDetail.cs" />
   </ItemGroup>
 </Project>

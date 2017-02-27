@@ -1,80 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Models;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 
+
+
 namespace DataAccess
 {
-    public class MongoAccess
+    public class MongoAccess : IDataAccess
     {
-        //readonly 
-        private MongoDatabase _mongoDatabase;
-        private MongoClient mongoClient;
+        private IMongoDatabase _mongoDatabase;
 
-        public MongoAccess(string connection)
+
+        public MongoAccess(string connection, string dataBase)
         {
-             mongoClient = new MongoClient(new MongoUrl(connection));
+            //not depreciated pattern
+            var settings = MongoClientSettings.FromUrl(new MongoUrl(connection));
+            _mongoDatabase = new MongoClient(settings).GetDatabase(dataBase);
         }
 
-        public void CreateContact(Contact newContact)
+        public void LogOrder(OrderDetail pOrderDetail)
         {
-            try
-            {
-                _mongoDatabase = RetreiveMongohqDb();
-
-                var contactsList = _mongoDatabase.GetCollection("ContactList");
-                WriteConcernResult result;
-                var hasError = false;
-                if (string.IsNullOrEmpty(newContact.Id))
-                {
-                    newContact.Id = ObjectId.GenerateNewId().ToString();
-                    result = contactsList.Insert(newContact);
-                    hasError = result.HasLastErrorMessage;
-                }
-                else
-                {
-                    var query = Query.EQ("_id", newContact.Id);
-                    IMongoUpdate update = Update
-                        .Set("Name", newContact.Name)
-                        .Set("Address", newContact.Address)
-                        .Set("Phone", newContact.Phone)
-                        .Set("Email", newContact.Email);
-                    result = contactsList.Update(query, update);
-                    //hasError = result.HasLastErrorMessage;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
         }
 
-        public List<Contact> GetAllContacts()
+        public List<OrderDetail> GetAllOrders()
         {
-            _mongoDatabase = RetreiveMongohqDb();
-            var model = new List<Contact>();
-            var contactsList = _mongoDatabase.GetCollection("ContactList").FindAll().AsEnumerable();
-            model = (from contact in contactsList
-                select new Contact
-                {
-                    Id = contact["_id"].AsString,
-                    Name = contact["Name"].AsString,
-                    Address = contact["Address"].AsString,
-                    Phone = contact["Phone"].AsString,
-                    Email = contact["Email"].AsString
-                }).ToList();
-            return model;
+            var list = new List<OrderDetail>();
+            return list;
         }
 
-
-        private MongoDatabase RetreiveMongohqDb()
+        public void ClearHistory()
         {
-            var mongoClient = new MongoClient(
-                new MongoUrl(@"mongodb://kurtfriedrichuser:!qwerty8@ds053658.mlab.com:53658/kurtmd"));
-            var server = mongoClient.GetServer();
-            return mongoClient.GetServer().GetDatabase("kurtmd");
         }
     }
 }

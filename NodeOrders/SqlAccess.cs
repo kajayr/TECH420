@@ -2,12 +2,13 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
+using Models;
 
 namespace NodeOrders
 {
     public class MyData
     {
-        public long CC { get; set; }
+        public long Cc { get; set; }
         public long phoneNum { get; set; }
         public bool CardOK { get; set; }
         public decimal Price { get; set; }
@@ -15,6 +16,9 @@ namespace NodeOrders
 
     public class SqlAccess
     {
+        const string server = @"mongodb://user2:password@ds054619.mlab.com:54619/isit420";
+        const string db = " foo";
+
         public DataSet GetCustData()
         {
             //instantiate the data adapter
@@ -43,35 +47,31 @@ namespace NodeOrders
             }
             catch (SqlException sqlEx)
             {
-                //here you might write details to an error log
-                // that exists on a network server or in another database
-
-                //note that we do not throw the original SQLException object
-                //because the object contains information (server, database, etc.)
-                //that we do not want to reveal
-                throw new ApplicationException("Database operation failed.  Please contact your System Administrator");
+                throw new ApplicationException("Database operation failed.  Please contact your System Administrator "  + sqlEx.Message);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                throw ex;
+                throw;
             }
         }
 
-        public string Buy(string pCDinfo, long pCC, long pPhone)
+        public string Buy(string pCDinfo, long pCc, long pPhone, string name)
         {
             // minimize the tx time, get as much setup down before starting Tx
             // 2nd thread to simulate a call to Visa/MC to verify and charge amount to CC
 
             var words = pCDinfo.Split(' ');
-            var pCdID = Convert.ToInt32(words[0]);
+            var pCdId = Convert.ToInt32(words[0]);
             var pCdPrice = Convert.ToDecimal(words[1]);
 
             var t2 = new Thread(ValidateCC); // create second Thread, point it to the code (method) to execute
-            var theData = new MyData();
-            theData.CC = pCC;
-            theData.phoneNum = pPhone;
-            theData.CardOK = false;
-            theData.Price = pCdPrice;
+            var theData = new MyData
+            {
+                Cc = pCc,
+                phoneNum = pPhone,
+                CardOK = false,
+                Price = pCdPrice
+            };
             var othersNotDone = true; // whill use this to decide when we can proceed
 
             t2.Start(theData); // start the thread
@@ -79,13 +79,13 @@ namespace NodeOrders
             var connection = new SqlConnection(@"Server = localhost;Database=NodeOrders;Integrated Security=SSPI");
             var updateCommand = new SqlCommand("UPDATE Inventory  " +
                                                " SET ItemQuantity = (ItemQuantity - 1) " +
-                                               " WHERE CdID = " + pCdID +
+                                               " WHERE CdID = " + pCdId +
                                                " AND ItemQuantity > 0 ", connection);
-            // this constuction avoids concurrency issues (I think!)
+            // this construction avoids concurrency issues (I think!)
 
             SqlTransaction InventoryTransaction; // declare a variable of type SqlTransaction 
             connection.Open(); // after we create the connection, we can start the Tx
-            InventoryTransaction = connection.BeginTransaction(); //declare the begining of the transaction (set)
+            InventoryTransaction = connection.BeginTransaction(); //declare the beginning of the transaction (set)
             updateCommand.Transaction = InventoryTransaction; // assign a Transaction “master” to the SQL cmd
 
             // 2 parts of Tx are, deal with inventory table, and deal with VISA/MC
@@ -93,7 +93,7 @@ namespace NodeOrders
             var recChanged = updateCommand.ExecuteNonQuery(); // do the SQL
 
 
-            while (othersNotDone) // waiting until thread 2 completes communicaiton with VISA/MC
+            while (othersNotDone) // waiting until thread 2 completes communication with VISA/MC
             {
                 othersNotDone = false;
                 Thread.Sleep(1000); // be a bit patient
@@ -117,6 +117,9 @@ namespace NodeOrders
             else // all is well, 
             {
                 InventoryTransaction.Commit();
+
+                var logger  = new DataAccess.MongoAccess(server,db);
+                logger.LogOrder(new OrderDetail());
             }
             connection.Close();
 
@@ -124,19 +127,13 @@ namespace NodeOrders
             return returnMsg;
         }
 
-
-        private void ValidateCC(object inputObject) // threads can only accept a input parameter of type object
+        private void ValidateCC(object inputObject) 
         {
-            var localCopy = (MyData) inputObject; // cast the generic object back to our object
-            // so we now have the CC#, phone#, and Price
-            Thread.Sleep(2000); // pretent we go to VISA/MC and process this, and get a yes or no reply from them
-
+            var localCopy = (MyData) inputObject; 
+            Thread.Sleep(2000); 
             var myRandom = new Random();
-            var ranNum = myRandom.Next(1, 4); // 1 in 3 credit cards are bad
-            if (ranNum > 2)
-                localCopy.CardOK = false;
-            else
-                localCopy.CardOK = true;
+            var ranNum = myRandom.Next(1, 4);
+            localCopy.CardOK = ranNum <= 2;
         }
     }
 }

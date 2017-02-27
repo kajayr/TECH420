@@ -110,6 +110,7 @@
     <Content Include="Images\favicon\mstile-70x70.png" />
     <Content Include="Images\favicon\yandex-browser-50x50.png" />
     <Content Include="js\main.js" />
+    <Content Include="OrderHistory.aspx" />
     <Content Include="package.json" />
     <Content Include="src\images\logo.png" />
     <Content Include="src\scss\main.scss" />
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="Customer.Master.designer.cs">
       <DependentUpon>Customer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlAccess.cs" />

@@ -64,11 +64,9 @@ C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\No
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\NodeOrders.pdb
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\DataAccess.dll
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Bson.dll
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.Legacy.dll
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.dll
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.Core.dll
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\DataAccess.pdb
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.Legacy.xml
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.xml
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.dll
 C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.pdb
