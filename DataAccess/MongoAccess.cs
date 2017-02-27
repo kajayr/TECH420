@@ -72,9 +72,9 @@ namespace DataAccess
         private MongoDatabase RetreiveMongohqDb()
         {
             var mongoClient = new MongoClient(
-                new MongoUrl(@"mongodb://kurtfriedrichuser:!qwerty8@ds053658.mlab.com:53658/kurtmd"));
+                new MongoUrl(@"mongodb://kajayr:kaj8@ds053658.mlab.com:53658/420kurt"));
             var server = mongoClient.GetServer();
-            return mongoClient.GetServer().GetDatabase("kurtmd");
+            return mongoClient.GetServer().GetDatabase("420kurt");
         }
     }
 }
