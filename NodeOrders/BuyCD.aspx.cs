@@ -26,10 +26,7 @@ namespace NodeOrders
 
             if (e.CommandName != "Buy") return;
 
-            //yeah...
-            // lets use the power of an OO and use . 
-            // lets also use a type that isn't proc dependent.... 
-            // and last but not least, catch this horrible block
+  
             try
             {
                 var creditCardNumber = long.Parse(TextBoxCC.Text.Trim().Replace(" ", ""));

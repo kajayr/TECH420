@@ -17,7 +17,7 @@ namespace NodeOrders
     public class SqlAccess
     {
         const string server = @"mongodb://user2:password@ds054619.mlab.com:54619/isit420";
-        const string db = " foo";
+        const string db = "isit420";
 
         public DataSet GetCustData()
         {
@@ -83,7 +83,7 @@ namespace NodeOrders
                                                " AND ItemQuantity > 0 ", connection);
             // this construction avoids concurrency issues (I think!)
 
-            SqlTransaction InventoryTransaction; // declare a variable of type SqlTransaction 
+            SqlTransaction InventoryTransaction; // declare a variable of type SqlTransaction
             connection.Open(); // after we create the connection, we can start the Tx
             InventoryTransaction = connection.BeginTransaction(); //declare the beginning of the transaction (set)
             updateCommand.Transaction = InventoryTransaction; // assign a Transaction “master” to the SQL cmd
@@ -114,12 +114,21 @@ namespace NodeOrders
                 else
                     returnMsg = "Sorry, your credit card was refused.";
             }
-            else // all is well, 
+            else // all is well,
             {
                 InventoryTransaction.Commit();
 
                 var logger  = new DataAccess.MongoAccess(server,db);
-                logger.LogOrder(new OrderDetail());
+
+                logger.LogOrder(
+                    new OrderDetail
+                        {
+                            CreditCard = pCc,
+                            PhoneNumber = pPhone,
+                            Price = pCdPrice,
+                            Name =  name
+                        }
+                    );
             }
             connection.Close();
 
@@ -127,10 +136,10 @@ namespace NodeOrders
             return returnMsg;
         }
 
-        private void ValidateCC(object inputObject) 
+        private void ValidateCC(object inputObject)
         {
-            var localCopy = (MyData) inputObject; 
-            Thread.Sleep(2000); 
+            var localCopy = (MyData) inputObject;
+            Thread.Sleep(2000);
             var myRandom = new Random();
             var ranNum = myRandom.Next(1, 4);
             localCopy.CardOK = ranNum <= 2;

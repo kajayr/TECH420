@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Security.AccessControl;
 using System.Text;
@@ -14,10 +14,10 @@ namespace Models
         }
 
         [BsonId]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public long CreditCard { get;  set; }
         public long PhoneNumber { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public string Name { get; set; }
         [BsonElement("Date")]
         // ReSharper disable once MemberCanBePrivate.Global

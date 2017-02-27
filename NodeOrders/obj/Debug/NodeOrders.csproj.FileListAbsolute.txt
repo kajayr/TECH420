@@ -58,15 +58,3 @@ C:\Users\kurt.friedrich\Desktop\AAA-Winter2017\ISIT-420winter17\2-ADO-SQL\4-Node
 C:\Users\kurt.friedrich\Desktop\AAA-Winter2017\ISIT-420winter17\2-ADO-SQL\4-NodeOrdersInventory\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.csprojResolveAssemblyReference.cache
 C:\Users\kurt.friedrich\Desktop\AAA-Winter2017\ISIT-420winter17\2-ADO-SQL\4-NodeOrdersInventory\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.dll
 C:\Users\kurt.friedrich\Desktop\AAA-Winter2017\ISIT-420winter17\2-ADO-SQL\4-NodeOrdersInventory\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.pdb
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.csprojResolveAssemblyReference.cache
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\NodeOrders.dll.config
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\NodeOrders.dll
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\NodeOrders.pdb
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\DataAccess.dll
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Bson.dll
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.dll
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.Core.dll
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\DataAccess.pdb
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\bin\MongoDB.Driver.xml
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.dll
-C:\Users\richard.WRINKLEBRAIN\OneDrive\ISIT420\ASPXinventoryTX\NodeOrders\obj\Debug\NodeOrders.pdb

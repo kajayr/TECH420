@@ -12,14 +12,14 @@ namespace NodeOrders
     {
         private IDataAccess mongo;
         const string server = @"mongodb://user2:password@ds054619.mlab.com:54619/isit420";
-        const string database = "CdOrders";
+        const string database = "isit420";
 
-            
+
         protected void Page_Load(object sender, EventArgs e)
         {
             mongo = new MongoAccess(server, database);
             var  orderDetailList = mongo.GetAllOrders();
-         
+
             rptrOrders.DataSource = orderDetailList;
             rptrOrders.DataBind();
             lblStatus.Text = "There have been " + orderDetailList.Count.ToString() + " orders.";

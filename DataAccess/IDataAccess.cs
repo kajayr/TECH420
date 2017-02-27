@@ -6,7 +6,7 @@ namespace DataAccess
     public interface IDataAccess
     {
         void LogOrder(OrderDetail pOrderDetail);
-        List<OrderDetail> GetAllOrders();
+          List<OrderDetail> GetAllOrders();
         void ClearHistory();
     }
 }
