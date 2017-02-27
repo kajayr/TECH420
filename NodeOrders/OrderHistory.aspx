@@ -9,9 +9,12 @@
       <br/>
     <asp:Repeater ID="rptrOrders" runat="server">
           <ItemTemplate>
-               Id : <strong style="color: black;"><%#Eval("Id") %></strong> &nbsp;&nbsp; &nbsp;&nbsp; Name: <strong style="color: black;"><%#Eval("Name") %></strong><br/>
-              CC: <strong style="color: black;"><%#Eval("CreditCard") %></strong> &nbsp;&nbsp; &nbsp;&nbsp; Price: <strong style="color: black;"><%#Eval("Price", "{0:C}") %></strong> <br />
+               Id : <strong style="color: black;"><%#Eval("Id") %></strong> &nbsp;&nbsp; &nbsp;&nbsp; Name: <strong style="color: black;"><%#Eval("Name") %></strong>&nbsp;&nbsp; &nbsp;&nbsp; Phone: <strong style="color: black;"><%#Eval("PhoneNumber") %></strong>
+              CreditCard: <strong style="color: black;"><%#Eval("CreditCard") %></strong> &nbsp;&nbsp; &nbsp;&nbsp; Price: <strong style="color: black;"><%#Eval("Price", "{0:C}") %></strong>
             </ItemTemplate>
+        <SeparatorTemplate>
+            <hr/>
+        </SeparatorTemplate>
     </asp:Repeater>
 
     <br />

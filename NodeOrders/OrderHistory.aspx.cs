@@ -31,6 +31,7 @@ namespace NodeOrders
         protected void btnClear_Click(object sender, EventArgs e)
         {
             mongo.ClearHistory();
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
